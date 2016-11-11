@@ -3,4 +3,11 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <!--style_pink-->
+    <color name="pink_main">#FFC8C8</color>
+    <color name="pink_second">#FF9999</color>
+    <color name="pink_dark">#444F5A</color>
+    <color name="pink_dark_dark">#3E4149</color>
+    <color name="pink_text">@color/pink_dark_dark</color>
+    <color name="pink_text_title">@color/pink_dark</color>
 </resources>
