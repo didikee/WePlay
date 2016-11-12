@@ -11,7 +11,7 @@ import java.util.List;
  */
 
 public class MainPagerAdapter extends FragmentPagerAdapter{
-    private String[] mTitles = new String[]{"唐僧", "大师兄", "二师兄"};
+    private String[] mTitles = new String[]{"WE", "MORE", "ME"};
 
     private List<Fragment> fragments;
 

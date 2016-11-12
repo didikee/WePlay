@@ -1,4 +1,4 @@
-package com.didikee.weplay.ui.fragment;
+package com.didikee.weplay.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.didikee.weplay.R;
-import com.didikee.weplay.ui.MainActivity;
 import com.didikee.weplay.util.ContextUtil;
 
 import didikee.com.permissionshelper.PermissionsHelper;
