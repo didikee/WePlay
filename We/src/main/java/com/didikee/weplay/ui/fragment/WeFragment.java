@@ -47,6 +47,7 @@ public class WeFragment extends BaseFragment {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         actProgressLayout.expand();
+//                        actProgressLayout.big();
                         Log.d(TAG, "onClick: 1");
                     }
                 })

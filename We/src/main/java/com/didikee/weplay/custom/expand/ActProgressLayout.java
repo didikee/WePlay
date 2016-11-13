@@ -37,19 +37,28 @@ public class ActProgressLayout extends BaseExpandLayout {
     private void startFlow(Context context) {
         content = LayoutInflater.from(context).inflate(R.layout.item_progress_dialog, null);
         mProgressBar = ((ProgressBar) content.findViewById(R.id.progressBar));
-        this.addView(content, ViewGroup.LayoutParams.MATCH_PARENT,0);
+        this.addView(content);
+        ViewGroup.LayoutParams layoutParams = content.getLayoutParams();
+        layoutParams.height=0;
+        content.setLayoutParams(layoutParams);
     }
 
     @Override
     public void expand() {
-        int height = DisplayUtil.dp2px(getContext(), 48);
+        int height = DisplayUtil.dp2px(getContext(), 36);
         SimpleExpandAnimation simpleExpandAnimation=new SimpleExpandAnimation(0,height);
         Animator[] animators = simpleExpandAnimation.getAnimators(content);
         Animator animator = animators[0];
         if (animator!=null){
-            animator.setDuration(300);
+            animator.setDuration(618);
             animator.start();
         }
+    }
+
+    public void big(){
+        ViewGroup.LayoutParams layoutParams = content.getLayoutParams();
+        layoutParams.height=300;
+        content.setLayoutParams(layoutParams);
     }
     public void updateProgress(int progress){
         progress = progress >100 ? 100 :progress <0 ? 0 :progress;

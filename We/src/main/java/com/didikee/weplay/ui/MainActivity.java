@@ -11,6 +11,7 @@ import com.didikee.weplay.R;
 import com.didikee.weplay.adapter.MainPagerAdapter;
 import com.didikee.weplay.custom.WrapContentViewPager;
 import com.didikee.weplay.test.OneFragment;
+import com.didikee.weplay.ui.fragment.ActItemFragment;
 import com.didikee.weplay.ui.fragment.WeFragment;
 
 import java.util.ArrayList;
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         mViewPager.setAdapter(pagerAdapter);
         //TODO fragment
         final WeFragment oneFragment=new WeFragment();
-        final OneFragment twoFragment=new OneFragment();
+        final ActItemFragment twoFragment=new ActItemFragment();
         final OneFragment threeFragment=new OneFragment();
         List<Fragment> fragments=new ArrayList<>();
         fragments.add(oneFragment);

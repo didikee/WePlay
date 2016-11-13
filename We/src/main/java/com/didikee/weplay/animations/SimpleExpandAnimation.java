@@ -2,6 +2,7 @@ package com.didikee.weplay.animations;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -33,32 +34,13 @@ public class SimpleExpandAnimation implements BaseAnimation {
                 @Override
                 public void onAnimationUpdate(ValueAnimator animation) {
                     int animatedValue = (int) animation.getAnimatedValue();
+                    Log.d(TAG, "onAnimationUpdate: "+animatedValue);
                     ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
                     layoutParams.height=animatedValue;
                     view.setLayoutParams(layoutParams);
                 }
             });
-            animator.addListener(new Animator.AnimatorListener() {
-                @Override
-                public void onAnimationStart(Animator animation) {
-                    if (mAnimationListener!=null)mAnimationListener.onAnimationStart(animation);
-                }
-
-                @Override
-                public void onAnimationEnd(Animator animation) {
-                    if (mAnimationListener!=null)mAnimationListener.onAnimationEnd(animation);
-                }
-
-                @Override
-                public void onAnimationCancel(Animator animation) {
-                    if (mAnimationListener!=null)mAnimationListener.onAnimationCancel(animation);
-                }
-
-                @Override
-                public void onAnimationRepeat(Animator animation) {
-                    if (mAnimationListener!=null)mAnimationListener.onAnimationRepeat(animation);
-                }
-            });
+//            animator.addListener(mAnimationListener);
         }
         return new Animator[]{animator};
     }
