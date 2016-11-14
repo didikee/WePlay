@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="LEFT">1</integer>
+    <integer name="RIGHT">2</integer>
+    <integer name="CENTER">3</integer>
+    <integer name="UP">4</integer>
+    <integer name="DOWN">5</integer>
+    <integer name="OUT">6</integer>
+    <integer name="INNER">7</integer>
+</resources>

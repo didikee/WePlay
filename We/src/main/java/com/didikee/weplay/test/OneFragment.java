@@ -1,8 +1,8 @@
 package com.didikee.weplay.test;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.didikee.weplay.R;
 import com.didikee.weplay.base.BaseFragment;
@@ -25,7 +25,8 @@ public class OneFragment extends BaseFragment {
         tv_toast.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "Hello World!", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getActivity(), "Hello World!", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getActivity(), TestLife2Activity.class));
             }
         });
     }

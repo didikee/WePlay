@@ -1,24 +1,32 @@
 package com.didikee.weplay.ui.fragment;
 
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
+import android.content.Intent;
 import android.view.View;
-import android.view.ViewGroup;
 
 import com.didikee.weplay.R;
-public class OneNoteFragment extends Fragment {
+import com.didikee.weplay.base.BaseFragment;
+import com.didikee.weplay.test.TestLife2Activity;
+
+public class OneNoteFragment extends BaseFragment {
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected int setLayoutResId() {
+        return R.layout.fragment_one_note;
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_one_note, container, false);
+    protected void initView(View content) {
+        content.findViewById(R.id.tv_1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), TestLife2Activity.class));
+            }
+        });
+    }
+
+    @Override
+    protected void startFlow() {
+
     }
 
     @Override
