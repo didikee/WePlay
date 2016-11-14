@@ -11,11 +11,14 @@ import com.didikee.weplay.R;
 import com.didikee.weplay.adapter.MainPagerAdapter;
 import com.didikee.weplay.custom.WrapContentViewPager;
 import com.didikee.weplay.test.OneFragment;
+import com.didikee.weplay.ui.fragment.ActItemFragment;
+import com.didikee.weplay.ui.fragment.WeFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+    private final String TAG=getClass().getSimpleName();
     private TabLayout mTabLayout;
     private WrapContentViewPager mViewPager;
     @Override
@@ -34,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
         MainPagerAdapter pagerAdapter=new MainPagerAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(pagerAdapter);
         //TODO fragment
-        final OneFragment oneFragment=new OneFragment();
-        final OneFragment twoFragment=new OneFragment();
+        final WeFragment oneFragment=new WeFragment();
+        final ActItemFragment twoFragment=new ActItemFragment();
         final OneFragment threeFragment=new OneFragment();
         List<Fragment> fragments=new ArrayList<>();
         fragments.add(oneFragment);
@@ -49,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
         mTabLayout.getTabAt(2).setIcon(getResources().getDrawable(R.drawable.ic_menu_person));
 
 //        startActivity(new Intent(this, TestLifeActivity.class));
-
 
     }
 }

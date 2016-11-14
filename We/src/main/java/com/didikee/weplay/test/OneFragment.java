@@ -30,4 +30,9 @@ public class OneFragment extends BaseFragment {
         });
     }
 
+    @Override
+    protected void startFlow() {
+
+    }
+
 }
