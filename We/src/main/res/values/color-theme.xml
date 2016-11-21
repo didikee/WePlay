@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_black">#202020</color>
+    <color name="main_light">#ECECEC</color>
+    <color name="main_gray">#A1A1A1</color>
+    <color name="status_bar_light">#6E6E6E</color>
+</resources>

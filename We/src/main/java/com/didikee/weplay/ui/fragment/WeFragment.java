@@ -6,7 +6,6 @@ import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.View;
 
-import com.afollestad.materialdialogs.MaterialDialog;
 import com.didikee.weplay.R;
 import com.didikee.weplay.base.BaseFragment;
 import com.didikee.weplay.custom.expand.ActProgressLayout;
@@ -76,7 +75,6 @@ public class WeFragment extends BaseFragment {
         mdDialog.show();
     }
 
-    MaterialDialog progressDialog;
 
     private void initContact() {
         final AsyncTask<Void, Integer, List<SimpleContact>> a = new AsyncContactHandler(getActivity()) {
@@ -88,21 +86,17 @@ public class WeFragment extends BaseFragment {
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                progressDialog.show();
             }
 
             @Override
             protected void onProgressUpdate(Integer... values) {
                 Log.d(TAG, "onProgressUpdate: " + values[0]);
-                progressDialog.setProgress(values[0]);
             }
 
             @Override
             protected void onPostExecute(List<SimpleContact> simpleContacts) {
                 super.onPostExecute(simpleContacts);
                 Log.d(TAG, "onPostExecute: " + simpleContacts.size());
-                progressDialog.setProgress(50);
-                progressDialog.dismiss();
             }
         };
 //        a.execute();

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <!--<color name="colorPrimary">@color/dl_main</color>-->
+    <!--<color name="colorPrimaryDark">@color/dl_second</color>-->
+    <!--<color name="textColorPrimary">#FF4081</color>-->
+    <!--<color name="colorAccent">@color/dl_dark</color>-->
+    <!--<color name="windowBackground">@color/dl_main</color>-->
+    <!--<color name="navigationBarColor">@android:color/transparent</color>-->
     <!--style_pink-->
     <color name="pink_main">#FFC8C8</color>
     <color name="pink_second">#FF9999</color>
@@ -10,4 +13,68 @@
     <color name="pink_dark_dark">#3E4149</color>
     <color name="pink_text">@color/pink_dark_dark</color>
     <color name="pink_text_title">@color/pink_dark</color>
+
+    <!--style_dark_light-->
+    <color name="dl_main">@color/main_light</color>
+    <color name="dl_second">@color/main_gray</color>
+    <color name="dl_dark">@color/main_black</color>
+    <color name="dl_text">@color/pink_dark_dark</color>
+    <color name="dl_text_title">@color/pink_dark</color>
+
+    <!--ui-->
+    <!--<color name="colorPrimary">#795548</color>
+    <color name="colorPrimaryDark">#5D4037</color>
+    <color name="colorPrimaryLight">#D7CCC8</color>
+    <color name="colorAccent">#607D8B</color>
+    <color name="textColorPrimary">#212121</color>
+    <color name="textColorSecondary">#757575</color>
+    <color name="colorIcons">#FFFFFF</color>
+    <color name="colorDivider">#BDBDBD</color>-->
+
+    <!--ui v2-->
+    <!--<color name="colorPrimary">#607D8B</color>
+    <color name="colorPrimaryDark">#455A64</color>
+    <color name="colorPrimaryLight">#CFD8DC</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="textColorPrimary">#212121</color>
+    <color name="textColorSecondary">#757575</color>
+    <color name="colorIcons">#FFFFFF</color>
+    <color name="colorDivider">#BDBDBD</color>
+    <color name="gray_light">#F2F2F2</color>-->
+
+    <!--ui v3-->
+    <!--<color name="colorPrimary">#ECEFF1</color>
+    <color name="colorPrimary_light">#ffffff</color>
+    <color name="colorPrimary_dark">#cfd6db</color>
+    <color name="colorPrimary_fix">#f1eeec</color>
+
+    <color name="colorPrimaryDark">#616161</color>
+    <color name="colorPrimaryDark_light">#7a7a7a</color>
+    <color name="colorPrimaryDark_dark">#474747</color>
+
+    <color name="colorPrimaryLight">#9E9E9E</color>
+    <color name="colorPrimaryLight_light">#b7b7b7</color>
+    <color name="colorPrimaryLight_dark">#848484</color>
+
+    <color name="colorAccent">#E57373</color>
+    <color name="colorAccent_light">#ed9e9e</color>
+    <color name="colorAccent_dark">#dd4848</color>
+    <color name="colorAccent_fix">#73e5e5</color>
+
+    <color name="textColorPrimary">#212121</color>
+    <color name="textColorSecondary">#757575</color>
+    <color name="colorIcons">#FFFFFF</color>
+    <color name="colorDivider">#BDBDBD</color>
+    <color name="gray_light">#F2F2F2</color>-->
+
+    <!--ui v4-->
+    <color name="colorPrimary">#607D8B</color>
+    <color name="colorPrimaryDark">#455A64</color>
+    <color name="colorPrimaryLight">#CFD8DC</color>
+    <color name="colorAccent">#FF5252</color>
+    <color name="textColorPrimary">#212121</color>
+    <color name="textColorSecondary">#757575</color>
+    <color name="colorIcons">#FFFFFF</color>
+    <color name="colorDivider">#BDBDBD</color>
+
 </resources>
