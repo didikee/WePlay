@@ -8,14 +8,13 @@ import com.didikee.weplay.base.BaseFragment;
 import com.didikee.weplay.test.TestLife2Activity;
 
 public class OneNoteFragment extends BaseFragment {
-
     @Override
     protected int setLayoutResId() {
         return R.layout.fragment_one_note;
     }
 
     @Override
-    protected void initView(View content) {
+    protected void initView() {
         content.findViewById(R.id.tv_1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

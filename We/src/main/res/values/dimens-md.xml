@@ -10,6 +10,7 @@
     <dimen name="icon_large_size">48dp</dimen>
     <dimen name="dp56">56dp</dimen>
     <dimen name="dp72">72dp</dimen>
+    <dimen name="toolbar_height">56dp</dimen>
 
     <!--text size sp-->
     <dimen name="text_button_size">14sp</dimen>

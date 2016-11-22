@@ -12,8 +12,8 @@ import android.view.ViewGroup;
  */
 
 public abstract class BaseFragment extends Fragment {
-    private View content;
 
+    protected View content;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,12 +24,12 @@ public abstract class BaseFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable
             Bundle savedInstanceState) {
         content = inflater.inflate(setLayoutResId(), container, false);
-        initView(content);
+        initView();
         startFlow();
         return content;
     }
 
     protected abstract int setLayoutResId();
-    protected abstract void initView(View content);
+    protected abstract void initView();
     protected abstract void startFlow();
 }

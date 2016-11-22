@@ -21,7 +21,7 @@ public class ActItemFragment extends BaseFragment {
     }
 
     @Override
-    protected void initView(View content) {
+    protected void initView() {
         mListview = (ListView) content.findViewById(R.id.listView);
     }
 

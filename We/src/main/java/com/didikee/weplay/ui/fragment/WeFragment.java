@@ -4,7 +4,6 @@ import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
-import android.view.View;
 
 import com.didikee.weplay.R;
 import com.didikee.weplay.base.BaseFragment;
@@ -29,7 +28,7 @@ public class WeFragment extends BaseFragment {
     }
 
     @Override
-    protected void initView(View content) {
+    protected void initView() {
 
     }
 

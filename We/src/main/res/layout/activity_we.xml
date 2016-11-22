@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<RelativeLayout
     android:id="@+id/activity_we"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,22 +7,22 @@
     android:layout_height="match_parent"
     tools:context="com.didikee.weplay.ui.WEActivity"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <include layout="@layout/view_tool_bar"/>
 
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_above="@+id/bottom_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
     <com.didikee.weplay.custom.bottom.BottomNavigationView
         android:id="@+id/bottom_navigation_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
         app:itemBackground="@drawable/md_ripple_theme_dark"
         app:itemIconTint="@color/bottom_navigation_item_background_colors"
         app:itemTextColor="@color/bottom_navigation_item_background_colors"
         app:menu="@menu/menu_bottom_navigation"
         android:elevation="6dp"
-        >
+        />
 
-    </com.didikee.weplay.custom.bottom.BottomNavigationView>
-
-
-
-</FrameLayout>
+</RelativeLayout>

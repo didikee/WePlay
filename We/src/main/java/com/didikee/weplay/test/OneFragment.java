@@ -20,7 +20,7 @@ public class OneFragment extends BaseFragment {
     }
 
     @Override
-    protected void initView(View content) {
+    protected void initView() {
         tv_toast = ((TextView) content.findViewById(R.id.tv_toast));
         tv_toast.setOnClickListener(new View.OnClickListener() {
             @Override
