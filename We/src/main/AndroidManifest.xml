@@ -22,14 +22,15 @@
         <meta-data
             android:name="AA_DB_VERSION"
             android:value="1"/>
+
         <activity android:name=".ui.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity android:name=".ui.MainActivity">
-
         </activity>
         <activity android:name=".test.RippleActivity"/>
         <activity android:name=".test.TitleViewActivity">
@@ -38,13 +39,14 @@
         </activity>
         <activity android:name=".test.LimitActivity">
         </activity>
-        <activity android:name=".test.TestLifeActivity">
-        </activity>
         <activity android:name=".test.TestLife2Activity">
         </activity>
         <activity android:name=".test.ActRecyclerViewActivity">
         </activity>
-
+        <activity android:name=".test.TabLayoutActivity">
+        </activity>
+        <activity android:name=".test.swipe.SwipeLayoutActivity">
+        </activity>
     </application>
 
 </manifest>

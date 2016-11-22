@@ -33,7 +33,7 @@ public abstract class IBaseActivity extends AppCompatActivity {
         int fromLayoutId = setContentLayout();
         View fromLayout = LayoutInflater.from(this).inflate(fromLayoutId, null);
         View defaultTitleView = setDefaultTitleView();
-        mHeight = DisplayUtil.dp2px(this, 48);
+        mHeight = DisplayUtil.dp2px(this, setTitleHeight());
         mBaseContent.addView(defaultTitleView,0,new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,mHeight));
         mBaseContent.addView(fromLayout,1);
         setContentView(mBaseContent);
@@ -49,9 +49,9 @@ public abstract class IBaseActivity extends AppCompatActivity {
     protected abstract View setDefaultTitleView();
     protected abstract @LayoutRes int setContentLayout();
     protected abstract void startFlow();
+    protected abstract @DrawableRes int setTitleItemBackground();
+    protected abstract int setTitleHeight();
     public int getTitleHeight(){
         return mHeight;
     }
-
-    protected abstract @DrawableRes int setTitleItemBackground();
 }

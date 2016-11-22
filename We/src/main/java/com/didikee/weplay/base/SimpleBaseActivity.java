@@ -1,6 +1,7 @@
 package com.didikee.weplay.base;
 
 import android.graphics.Color;
+import android.os.Build;
 import android.support.annotation.DrawableRes;
 import android.text.TextUtils;
 import android.util.Log;
@@ -20,6 +21,8 @@ import com.didikee.weplay.R;
 
 public abstract class SimpleBaseActivity extends IBaseActivity implements View.OnClickListener {
 
+    private final String LEFT="LEFT";
+    private final String RIGHT="RIGHT";
     private final String TAG=getClass().getSimpleName();
     /**
      * @return inner false
@@ -60,17 +63,23 @@ public abstract class SimpleBaseActivity extends IBaseActivity implements View.O
         return linearLayout;
     }
 
-    @Override
-    protected void setULeftTitle(Object... model) {
+    private void createTitleModel(String which,Object... model){
         if (model==null)return;
+        LinearLayout linearLayout;
+        if (LEFT.equals(which)){
+            linearLayout = getSideView(getResources().getInteger(R.integer.LEFT));
+        }else {
+            linearLayout = getSideView(getResources().getInteger(R.integer.RIGHT));
+        }
+        int childCount = linearLayout.getChildCount();
         for (int i = 0; i < model.length; i++) {
             Object item = model[i];
             if (item==null)continue;
-            LinearLayout left = getSideView(getResources().getInteger(R.integer.LEFT));
+
             if (item instanceof String){
-                left.addView(createTitleText((String) item,i+1),getTitleHeight(),getTitleHeight());
+                linearLayout.addView(createTitleText((String) item,i+1,childCount,which),getTitleHeight(),getTitleHeight());
             }else if (item instanceof Integer){
-                left.addView(createTitleImage((Integer) item,i+1),getTitleHeight(),getTitleHeight());
+                linearLayout.addView(createTitleImage((Integer) item,i+1,childCount,which),getTitleHeight(),getTitleHeight());
             }else {
                 Log.e(TAG,"title must be string or image resource id !");
             }
@@ -78,8 +87,13 @@ public abstract class SimpleBaseActivity extends IBaseActivity implements View.O
     }
 
     @Override
-    protected void setURightTitle(Object... model) {
+    protected void setULeftTitle(Object... model) {
+        createTitleModel(LEFT,model);
+    }
 
+    @Override
+    protected void setURightTitle(Object... model) {
+        createTitleModel(RIGHT,model);
     }
 
     @Override
@@ -97,6 +111,10 @@ public abstract class SimpleBaseActivity extends IBaseActivity implements View.O
     @Override
     protected View setDefaultTitleView() {
         RelativeLayout titleContainer=new RelativeLayout(this);
+        if (Build.VERSION.SDK_INT >=Build.VERSION_CODES.LOLLIPOP){
+            titleContainer.setElevation(15);
+            titleContainer.setBackgroundColor(Color.WHITE);
+        }
         LinearLayout leftView = createSileView(true);
         LinearLayout rightView = createSileView(false);
         TextView middleTextView = setMiddleTextView();
@@ -113,26 +131,26 @@ public abstract class SimpleBaseActivity extends IBaseActivity implements View.O
         return titleContainer;
     }
 
-    private TextView createTitleText(String txt,int index){
+    private TextView createTitleText(String txt,int index,int start,String which){
         TextView textView=new TextView(this);
         textView.setLines(1);
         textView.setText(TextUtils.isEmpty(txt) ? "    " :txt);
         textView.setTextColor(Color.BLUE);
-        textView.setTextSize(16);
+        textView.setTextSize(13);
         textView.setGravity(Gravity.CENTER);
         textView.setClickable(true);
         textView.setBackgroundResource(setTitleItemBackground());
-        textView.setTag("LEFT"+index);
+        textView.setTag(which+(index+start));
         textView.setOnClickListener(this);
         return textView;
     }
-    private ImageView createTitleImage(@DrawableRes int imageResID, int index){
+    private ImageView createTitleImage(@DrawableRes int imageResID, int index,int start,String which){
         ImageView imageView=new ImageView(this);
         imageView.setImageResource(imageResID);
         imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
         imageView.setClickable(true);
         imageView.setBackgroundResource(setTitleItemBackground());
-        imageView.setTag("LEFT"+index);
+        imageView.setTag(which+(index+start));
         imageView.setOnClickListener(this);
         return imageView;
     }
@@ -145,7 +163,7 @@ public abstract class SimpleBaseActivity extends IBaseActivity implements View.O
     @Override
     public void onClick(View v) {
         String s = v.getTag().toString();
-        if (s.startsWith("LEFT")){
+        if (s.startsWith(LEFT)){
             String substring = s.substring(4, s.length());
             int index;
             try {
@@ -154,7 +172,7 @@ public abstract class SimpleBaseActivity extends IBaseActivity implements View.O
                 index=99;
             }
             onULeftClick(v,index);
-        }else if (s.startsWith("RIGHT")){
+        }else if (s.startsWith(RIGHT)){
             String substring = s.substring(5, s.length());
             int index ;
             try {
@@ -179,5 +197,10 @@ public abstract class SimpleBaseActivity extends IBaseActivity implements View.O
     }
     protected void setUMiddleTitle(CharSequence title){
         setUMiddleTitle(title,Gravity.CENTER);
+    }
+
+    @Override
+    protected int setTitleHeight() {
+        return 42;
     }
 }

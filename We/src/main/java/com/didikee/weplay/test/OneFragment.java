@@ -26,7 +26,8 @@ public class OneFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
 //                Toast.makeText(getActivity(), "Hello World!", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getActivity(), TestLife2Activity.class));
+//                startActivity(new Intent(getActivity(), TestLife2Activity.class));
+                startActivity(new Intent(getActivity(), TabLayoutActivity.class));
             }
         });
     }

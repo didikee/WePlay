@@ -1,11 +1,9 @@
 package com.didikee.weplay.ui;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 
 import com.didikee.weplay.R;
 import com.didikee.weplay.adapter.MainPagerAdapter;
@@ -27,9 +25,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolBar);
-        mToolbar.setTitleTextColor(Color.WHITE);//设置ToolBar的titl颜色
-        setSupportActionBar(mToolbar);
+//        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolBar);
+//        mToolbar.setTitleTextColor(Color.WHITE);//设置ToolBar的titl颜色
+//        setSupportActionBar(mToolbar);
 
         mTabLayout = (TabLayout) findViewById(R.id.tabLayout);
         mViewPager= (WrapContentViewPager) findViewById(R.id.viewPager);
@@ -52,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         mTabLayout.getTabAt(2).setIcon(getResources().getDrawable(R.drawable.ic_menu_person));
 
 //        startActivity(new Intent(this, TestLifeActivity.class));
-
+//        Pair<Integer, Integer> realWidthHeight = ContextUtil.getRealWidthHeight(this);
+//        Log.e("test","width: "+realWidthHeight.first +"  height: "+realWidthHeight.second);
     }
 }
