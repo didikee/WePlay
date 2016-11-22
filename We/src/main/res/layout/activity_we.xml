@@ -5,15 +5,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.didikee.weplay.ui.fragment.WEActivity"
+    tools:context="com.didikee.weplay.ui.WEActivity"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/view_tool_bar"/>
 
-    <com.didikee.weplay.custom.bottomNavigationView.BottomNavigationView
+    <com.didikee.weplay.custom.bottom.BottomNavigationView
         android:id="@+id/bottom_navigation_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="@color/colorPrimaryLight"
         app:itemBackground="@drawable/md_ripple_theme_dark"
         app:itemIconTint="@color/bottom_navigation_item_background_colors"
         app:itemTextColor="@color/bottom_navigation_item_background_colors"
@@ -21,7 +21,7 @@
         android:elevation="6dp"
         >
 
-    </com.didikee.weplay.custom.bottomNavigationView.BottomNavigationView>
+    </com.didikee.weplay.custom.bottom.BottomNavigationView>
 
 
 

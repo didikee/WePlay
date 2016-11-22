@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -16,6 +16,16 @@
         <item name="android:colorForeground">@color/main_light</item>
         <item name="colorPrimaryDark">@color/main_gray</item>
         <item name="colorAccent">@color/main_black</item>
+    </style>
+
+    <style name="WeV4Theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <!--&lt;!&ndash; Actionbar color &ndash;&gt;-->
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+        <!--&lt;!&ndash;Status bar color&ndash;&gt;-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--&lt;!&ndash;Window color&ndash;&gt;-->
+        <!--<item name="android:windowBackground">@color/colorIcons</item>-->
     </style>
 
 </resources>

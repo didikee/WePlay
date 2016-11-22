@@ -1,4 +1,4 @@
-package com.didikee.weplay.custom.bottomNavigationView;
+package com.didikee.weplay.custom.bottom;
 
 import android.content.Context;
 import android.os.Parcelable;

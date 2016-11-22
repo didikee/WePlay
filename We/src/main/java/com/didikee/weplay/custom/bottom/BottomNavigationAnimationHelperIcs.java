@@ -1,4 +1,4 @@
-package com.didikee.weplay.custom.bottomNavigationView;
+package com.didikee.weplay.custom.bottom;
 
 import android.support.design.internal.*;
 import android.support.transition.AutoTransition;

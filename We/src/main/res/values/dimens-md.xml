@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--offset dp-->
+    <dimen name="dp12">12dp</dimen>
+    <dimen name="dp14">14dp</dimen>
+    <dimen name="dp16">16dp</dimen>
+    <dimen name="dp18">18dp</dimen>
+    <dimen name="icon_small_size">24dp</dimen>
+    <dimen name="icon_medium_size">36dp</dimen>
+    <dimen name="icon_large_size">48dp</dimen>
+    <dimen name="dp56">56dp</dimen>
+    <dimen name="dp72">72dp</dimen>
+
+    <!--text size sp-->
+    <dimen name="text_button_size">14sp</dimen>
+    <dimen name="text_menu_size">14sp</dimen>
+    <dimen name="text_normal_small_size">12sp</dimen>
+    <dimen name="text_normal_size">14sp</dimen>
+    <dimen name="text_subhead_size">16sp</dimen>
+    <dimen name="text_title_size">20sp</dimen>
+    <dimen name="text_headline_size">24sp</dimen>
+    <dimen name="text_h1_size">34sp</dimen>
+    <dimen name="text_h2_size">45sp</dimen>
+    <dimen name="text_h3_size">56sp</dimen>
+
+    <!--elevaltion-->
+    <dimen name="z_nav_bottom_bar">8dp</dimen>
+    <dimen name="z_snack_bar">6dp</dimen>
+    <dimen name="z_content">0dp</dimen>
+    <dimen name="z_nav_drawer">16dp</dimen>
+    <dimen name="z_float_action_button">6dp</dimen>
+    <dimen name="z_search_box">2dp</dimen>
+</resources>
