@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/activity_we"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.didikee.weplay.ui.fragment.WEActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.didikee.weplay.custom.bottomNavigationView.BottomNavigationView
+        android:id="@+id/bottom_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimaryLight"
+        app:itemBackground="@drawable/md_ripple_theme_dark"
+        app:itemIconTint="@color/bottom_navigation_item_background_colors"
+        app:itemTextColor="@color/bottom_navigation_item_background_colors"
+        app:menu="@menu/menu_bottom_navigation"
+        android:elevation="6dp"
+        >
+
+    </com.didikee.weplay.custom.bottomNavigationView.BottomNavigationView>
+
+
+
+</FrameLayout>

@@ -43,6 +43,8 @@
         </activity>
         <activity android:name=".test.ActRecyclerViewActivity">
         </activity>
+        <activity android:name=".ui.fragment.WEActivity">
+        </activity>
         <activity android:name=".test.TabLayoutActivity">
         </activity>
         <activity android:name=".test.swipe.SwipeLayoutActivity">
