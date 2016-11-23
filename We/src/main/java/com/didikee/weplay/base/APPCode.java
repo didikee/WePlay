@@ -12,5 +12,6 @@ public final class APPCode {
     public static final String USER_NAME="user_name";
     public static final String USER_NICK_NAME="user_nick_name";
     public static final String USER_PHONE_NUM="user_phone_num";
-    public static final String USER_STAR_NUM="user_star_num";
+    public static final String USER_STAR_NUM="user_star_num";//separate
+    public static final String SEPARATE="_@_";//整个app默认的分隔字符串
 }

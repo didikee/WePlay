@@ -1,4 +1,4 @@
-package com.didikee.weplay.framework.contact;
+package com.didikee.weplay.framework.bean.contact;
 
 import java.util.List;
 
@@ -7,10 +7,18 @@ import java.util.List;
  */
 
 public class SimpleContact {
-
+    private String contactID;
     private String name;
     private List<String> phone;
     private List<String> email;
+
+    public String getContactID() {
+        return contactID;
+    }
+
+    public void setContactID(String contactID) {
+        this.contactID = contactID;
+    }
 
     public String getName() {
         return name;
