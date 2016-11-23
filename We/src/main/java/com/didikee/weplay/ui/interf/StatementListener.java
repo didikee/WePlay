@@ -1,4 +1,4 @@
-package com.didikee.weplay.interf;
+package com.didikee.weplay.ui.interf;
 
 /**
  * Created by didik on 2016/11/12.

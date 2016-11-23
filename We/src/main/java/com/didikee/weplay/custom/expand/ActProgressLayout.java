@@ -10,7 +10,7 @@ import android.widget.ProgressBar;
 
 import com.didikee.uilibs.utils.DisplayUtil;
 import com.didikee.weplay.R;
-import com.didikee.weplay.animations.SimpleExpandAnimation;
+import com.didikee.weplay.ui.animations.SimpleExpandAnimation;
 
 /**
  * Created by didik on 2016/11/12.

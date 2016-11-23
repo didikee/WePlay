@@ -1,4 +1,4 @@
-package com.didikee.weplay.db.Model;
+package com.didikee.weplay.framework.db.Model;
 
 import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;

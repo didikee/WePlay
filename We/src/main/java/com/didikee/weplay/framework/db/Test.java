@@ -1,4 +1,4 @@
-package com.didikee.weplay.db;
+package com.didikee.weplay.framework.db;
 
 /**
  * Created by didik on 2016/9/20.

@@ -1,4 +1,4 @@
-package com.didikee.weplay.adapter;
+package com.didikee.weplay.ui.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;

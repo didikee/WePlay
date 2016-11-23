@@ -1,4 +1,4 @@
-package com.didikee.weplay.animations;
+package com.didikee.weplay.ui.animations;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;

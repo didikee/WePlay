@@ -20,6 +20,7 @@
 
     <style name="WeV4Theme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowNoTitle">true</item>
+        <item name="android:listDivider">@drawable/rv_divider</item>
         <!--&lt;!&ndash; Actionbar color &ndash;&gt;-->
         <!--<item name="colorPrimary">@color/colorPrimary</item>-->
         <!--&lt;!&ndash;Status bar color&ndash;&gt;-->
