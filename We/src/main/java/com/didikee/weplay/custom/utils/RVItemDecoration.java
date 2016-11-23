@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
@@ -13,8 +14,8 @@ import android.view.View;
  */
 
 public class RVItemDecoration extends RecyclerView.ItemDecoration {
-    public static final int HORIZONTAL = 0;
-    public static final int VERTICAL = 1;
+    public static final int HORIZONTAL = LinearLayoutManager.HORIZONTAL;
+    public static final int VERTICAL = LinearLayoutManager.VERTICAL;
 
     private int mOrientation = VERTICAL;
 
