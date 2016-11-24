@@ -5,20 +5,25 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import com.didikee.weplay.R;
-import com.didikee.weplay.custom.WrapContentViewPager;
 import com.didikee.weplay.test.tab.ExtTabLayout;
 import com.didikee.weplay.ui.fragment.PageFragment;
 
 public class TabLayoutActivity extends AppCompatActivity {
 
-    private SimpleFragmentPagerAdapter pagerAdapter;
+    private SimpleFragmentPagerAdapter pagerAdapter1;
+    private SimpleFragmentPagerAdapter pagerAdapter2;
 
-    private WrapContentViewPager viewPager;
+    private ViewPager viewPager;
 
     private ExtTabLayout tabLayout;
+    private View item1;
+    private View item2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,26 +32,47 @@ public class TabLayoutActivity extends AppCompatActivity {
     }
 
     private void startFlow() {
-        pagerAdapter = new SimpleFragmentPagerAdapter(getSupportFragmentManager(), this);
-        viewPager = (WrapContentViewPager) findViewById(R.id.viewpager);
-        viewPager.setAdapter(pagerAdapter);
+
+//        NestedScrollView scrollView = (NestedScrollView) findViewById (R.id.nestedScrollView);
+//        scrollView.setFillViewport (true);
+        item1 = findViewById(R.id.item1);
+        item2 = findViewById(R.id.item2);
+
+
+        pagerAdapter1 = new SimpleFragmentPagerAdapter(getSupportFragmentManager(), new String[]{"tab1","tab2","tab3","tab4"});
+        pagerAdapter2 = new SimpleFragmentPagerAdapter(getSupportFragmentManager(), new String[]{"tab999","tab998","tab99","tab22","hhhh","us的话"});
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
         tabLayout = (ExtTabLayout) findViewById(R.id.sliding_tabs);
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.setTabMode(ExtTabLayout.MODE_FIXED);
 
+        item1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                viewPager.setAdapter(pagerAdapter1);
+            }
+        });
+
+        item2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                viewPager.setAdapter(pagerAdapter2);
+            }
+        });
+        item1.performClick();
     }
 
 
 
     public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
 
-        final int PAGE_COUNT = 3;
-        private String tabTitles[] = new String[]{"tab1","tab2","tab3"};
+//        private String tabTitles[] = new String[]{"tab1","tab2","tab3"};
+        private String tabTitles[] ;
         private Context context;
 
-        public SimpleFragmentPagerAdapter(FragmentManager fm, Context context) {
+        public SimpleFragmentPagerAdapter(FragmentManager fm,String[] strings) {
             super(fm);
-            this.context = context;
+            tabTitles=strings;
         }
 
         @Override
@@ -56,7 +82,7 @@ public class TabLayoutActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return PAGE_COUNT;
+            return tabTitles.length;
         }
 
         @Override

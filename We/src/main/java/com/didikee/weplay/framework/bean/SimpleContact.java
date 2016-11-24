@@ -1,4 +1,4 @@
-package com.didikee.weplay.framework.bean.contact;
+package com.didikee.weplay.framework.bean;
 
 import java.util.List;
 

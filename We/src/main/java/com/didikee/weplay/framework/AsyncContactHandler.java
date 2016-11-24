@@ -9,7 +9,7 @@ import android.provider.ContactsContract;
 import android.util.Log;
 
 import com.didikee.weplay.base.APPCode;
-import com.didikee.weplay.framework.bean.contact.SimpleContact;
+import com.didikee.weplay.framework.bean.SimpleContact;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * Created by didik on 2016/11/12.
  * 获取通讯录联系人
- * {@link com.didikee.weplay.framework.bean.contact.SimpleContact}
+ * {@link com.didikee.weplay.framework.bean.SimpleContact}
  */
 
 public abstract class AsyncContactHandler extends AsyncTask<Void,Integer,List<SimpleContact>>{

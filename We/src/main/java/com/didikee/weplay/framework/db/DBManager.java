@@ -39,23 +39,13 @@ public class DBManager {
         mPersonDao.getDatabase();
     }
 
-    /**
-     * 向student表中插入一条数据
-     *
-     * @param student
-     */
-    public void insertStudent(Person student) {
-        mPersonDao.insert(student);
+    public void insertPerson(Person person) {
+        mPersonDao.insert(person);
     }
 
 
 
-    /**
-     * 向student表中插入多条数据
-     *
-     * @param list
-     */
-    public void insertStudent(List<Person> list) {
+    public void insertPersons(List<Person> list) {
         for (Person s : list) {
             mPersonDao.insert(s);
         }
@@ -66,11 +56,18 @@ public class DBManager {
      *
      * @return
      */
-    public List<Person> getAllStudents() {
+    public List<Person> getAllPersons() {
         return mPersonDao.loadAll();
     }
 
 
+    public void deletePerson(Person person){
+        mPersonDao.delete(person);
+    }
+
+    public void deleteAllPersons(){
+        mPersonDao.deleteAll();
+    }
 
     public void closeDb() {
         if (db.isOpen())
