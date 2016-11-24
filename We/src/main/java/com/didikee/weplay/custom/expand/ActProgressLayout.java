@@ -55,6 +55,11 @@ public class ActProgressLayout extends BaseExpandLayout {
         }
     }
 
+    @Override
+    public void collapse() {
+
+    }
+
     public void big(){
         ViewGroup.LayoutParams layoutParams = content.getLayoutParams();
         layoutParams.height=300;
@@ -65,10 +70,6 @@ public class ActProgressLayout extends BaseExpandLayout {
         mProgressBar.setProgress(progress);
     }
 
-    @Override
-    public void shrink() {
-
-    }
 
     public void setOnFinishListener(){
 

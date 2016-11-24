@@ -6,5 +6,5 @@ package com.didikee.weplay.custom.expand;
 
 public interface Expandable {
     void expand();//展开
-    void shrink();//收缩
+    void collapse();//收缩
 }
