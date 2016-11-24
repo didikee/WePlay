@@ -19,7 +19,24 @@ android {
         }
     }
 
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java', 'src/main/java-gen']
+        }
+    }
+
 }
+apply plugin: 'org.greenrobot.greendao'
+buildscript {
+    repositories {
+        mavenCentral()
+//        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    }
+    dependencies {
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.1'
+    }
+}
+
 
 repositories {
     mavenCentral()
@@ -32,10 +49,11 @@ dependencies {
     compile 'com.android.support:support-v4:25.0.1'
     compile 'com.didikee:UILibrary:0.8.5'
     compile 'com.didikee:permissionsHelper:0.1.4'
-//    compile 'com.didikee:UIRefreshLayout:0.0.1'
+    //    compile 'com.didikee:UIRefreshLayout:0.0.1'
     compile 'com.android.support:appcompat-v7:25.0.1'
     compile 'com.android.support:design:25.0.1'
     compile 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
-
+    compile 'org.greenrobot:greendao:3.2.0'
+    compile project(':greendaogenerator')
 }
 

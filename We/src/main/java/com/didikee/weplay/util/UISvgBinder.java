@@ -1,5 +1,7 @@
 package com.didikee.weplay.util;
 
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
 
 /**
@@ -8,7 +10,11 @@ import android.widget.ImageView;
 
 public class UISvgBinder {
 
-    public static void setImageView(ImageView svgImageView,int svgResID){
-
+    public static void setImageView(ImageView svgImageView, int svgResID,int color, Resources res){
+        Drawable drawable = res.getDrawable(svgResID);
+        Drawable drawableAider = SvgAider.tintDrawable(drawable, color);
+        svgImageView.setImageDrawable(drawableAider);
     }
+
+
 }

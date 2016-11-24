@@ -1,4 +1,4 @@
-package com.didikee.weplay.framework.contact;
+package com.didikee.weplay.framework.bean.contact;
 
 import android.content.ContentResolver;
 import android.content.Context;
