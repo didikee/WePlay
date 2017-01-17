@@ -1,4 +1,4 @@
-package com.didikee.weplay.core;
+package com.didikee.weplay.constant;
 
 /**
  * Created by didik 
