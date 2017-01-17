@@ -10,7 +10,7 @@ import com.didikee.weplay.base.BaseFragment;
 import com.didikee.weplay.custom.expand.ActProgressLayout;
 import com.didikee.weplay.custom.utils.AlertDialogButtonHandler;
 import com.didikee.weplay.framework.AsyncContactHandler;
-import com.didikee.weplay.framework.bean.SimpleContact;
+import com.didikee.weplay.framework.db.bean.SimpleContact;
 
 import java.lang.reflect.Field;
 import java.util.List;

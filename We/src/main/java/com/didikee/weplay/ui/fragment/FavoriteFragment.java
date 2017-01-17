@@ -14,15 +14,15 @@ import com.didikee.weplay.base.BaseRVViewHolder;
 import com.didikee.weplay.base.SimpleRVAdapter;
 import com.didikee.weplay.custom.utils.RVItemDecoration;
 import com.didikee.weplay.framework.AsyncContactHandler;
-import com.didikee.weplay.framework.bean.SimpleContact;
 import com.didikee.weplay.framework.db.DBManager;
+import com.didikee.weplay.framework.db.bean.Person;
+import com.didikee.weplay.framework.db.bean.SimpleContact;
 import com.didikee.weplay.ui.views.FavoriteHumanLayout;
 import com.didikee.weplay.ui.views.iview.OnFavoriteHumanClickListener;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import green.didikee.model.Person;
 
 /**
  * Created by didik on 2016/11/22.
@@ -68,7 +68,7 @@ public class FavoriteFragment extends BaseFragment implements OnFavoriteHumanCli
             @Override
             protected void bindView(BaseRVViewHolder helper, Person item) {
                 helper.setTextView(R.id.tv_name,item.getName());
-                helper.setTextView(R.id.tv_phone,item.getPhoneNumbers());
+                helper.setTextView(R.id.tv_phone,item.getPhones());
             }
         };
         mRV.setHasFixedSize(true);
@@ -80,16 +80,16 @@ public class FavoriteFragment extends BaseFragment implements OnFavoriteHumanCli
 
     @Override
     public void onNoteClick(View view, Long number) {
-        DBManager.getInstance(getContext()).deleteAllPersons();
+        DBManager.getPersonDaoHelper().deleteAll();
         getContacts();
 
     }
 
     @Override
     public void onLikeClick(View view, Long number) {
-        List<Person> allPersons = DBManager.getInstance(getContext()).getAllPersons();
+        List<Person> allPersons = DBManager.getPersonDaoHelper().queryAll();
         for (Person allPerson : allPersons) {
-            Log.d("person","name: "+allPerson.getName() +" phone:"+allPerson.getPhoneNumbers()+" email: "+allPerson.getEmails()+"\n");
+            Log.d("person","name: "+allPerson.getName() +" phone:"+allPerson.getPhones()+" email: "+allPerson.getEmails()+"\n");
         }
         favoriteAdapter.setData(allPersons);
     }
@@ -127,7 +127,6 @@ public class FavoriteFragment extends BaseFragment implements OnFavoriteHumanCli
         List<Person> personList=new ArrayList<>();
         for (SimpleContact simpleContact : simpleContacts) {
             Person single=new Person();
-            single.setContactID(simpleContact.getContactID());
             String name = simpleContact.getName();
             if (TextUtils.isEmpty(name)){
                 continue;
@@ -150,9 +149,9 @@ public class FavoriteFragment extends BaseFragment implements OnFavoriteHumanCli
                     phones= phones+ phone.get(i)+ APPCode.SEPARATE;
                 }
             }
-            single.setPhoneNumbers(phones);
+            single.setPhones(phones);
             personList.add(single);
         }
-        DBManager.getInstance(getContext()).insertPersons(personList);
+        DBManager.getPersonDaoHelper().save(personList);
     }
 }

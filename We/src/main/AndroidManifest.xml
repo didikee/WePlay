@@ -39,8 +39,6 @@
         </activity>
         <activity android:name=".test.LimitActivity">
         </activity>
-        <activity android:name=".test.TestLife2Activity">
-        </activity>
         <activity android:name=".test.ActRecyclerViewActivity">
         </activity>
         <activity android:name=".ui.WEActivity">

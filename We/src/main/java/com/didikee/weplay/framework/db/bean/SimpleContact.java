@@ -1,4 +1,4 @@
-package com.didikee.weplay.framework.bean;
+package com.didikee.weplay.framework.db.bean;
 
 import java.util.List;
 

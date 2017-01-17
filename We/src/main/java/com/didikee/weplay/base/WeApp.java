@@ -3,7 +3,7 @@ package com.didikee.weplay.base;
 import android.app.Application;
 import android.util.Log;
 
-import com.activeandroid.ActiveAndroid;
+import com.didikee.weplay.framework.db.DBManager;
 
 /**
  * Created by didik on 2016/9/20.
@@ -19,7 +19,8 @@ public class WeApp extends Application {
         ActivityLifeManager.getInstance().init(this);
 
         //db
-        ActiveAndroid.initialize(this);
+        DBManager.init(this);
+        DBManager.enableQueryBuilderLog(true);
     }
 
     @Override

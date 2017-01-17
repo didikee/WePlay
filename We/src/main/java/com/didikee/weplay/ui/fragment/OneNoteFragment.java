@@ -1,11 +1,9 @@
 package com.didikee.weplay.ui.fragment;
 
-import android.content.Intent;
 import android.view.View;
 
 import com.didikee.weplay.R;
 import com.didikee.weplay.base.BaseFragment;
-import com.didikee.weplay.test.TestLife2Activity;
 
 public class OneNoteFragment extends BaseFragment {
     @Override
@@ -18,7 +16,6 @@ public class OneNoteFragment extends BaseFragment {
         content.findViewById(R.id.tv_1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), TestLife2Activity.class));
             }
         });
     }
